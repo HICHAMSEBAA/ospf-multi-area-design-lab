@@ -120,15 +120,14 @@ Full details, failure modes and Wireshark tasks: [`docs/04-verification-and-trou
 .
 ├── README.md
 ├── LICENSE
-├── configs/                     # Per-device IOS-XE configs (R1-R9, Switch1-3)
+├── configs/                     
 ├── docs/
 │   ├── topology.png
 │   ├── 01-topology-analysis.md
 │   ├── 02-ip-addressing-plan.md
 │   ├── 03-ospf-design-decisions.md
 │   └── 04-verification-and-troubleshooting.md
-├── captures/                    # Put your Wireshark .pcapng files here
-├── scripts/validate_configs.py  # Offline consistency checker
+├── captures/                    
 └── .github/workflows/validate.yml
 ```
 
@@ -137,11 +136,7 @@ Full details, failure modes and Wireshark tasks: [`docs/04-verification-and-trou
 1. Build the topology in EVE-NG (or GNS3) exactly as drawn, using the interface names shown in [`docs/topology.png`](docs/topology.png).
 2. Paste each file from [`configs/`](configs/) into the matching device. If your IOS image rejects a command, check the optional-hardening notes in `docs/03`.
 3. Wait for adjacencies, then run the checks in [`docs/04-verification-and-troubleshooting.md`](docs/04-verification-and-troubleshooting.md).
-4. Optionally check the configs offline before loading them:
 
-```bash
-python3 scripts/validate_configs.py
-```
 
 The validator confirms router-IDs, unique addressing, /31 and /29 link consistency, area-range coverage and stub flags. It does not emulate OSPF, so it complements the live checks rather than replacing them.
 
