@@ -4,11 +4,10 @@
 ![Vendor](https://img.shields.io/badge/Vendor-Cisco%20IOS--XE-orange)
 ![Protocol](https://img.shields.io/badge/Protocol-OSPFv2%20%7C%20Multi--Area-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Validate](https://github.com/OWNER/REPO/actions/workflows/validate.yml/badge.svg)
+![Validate](https://github.com/HICHAMSEBAA/ospf-multi-area-design-lab/workflows/validate.yml/badge.svg)
 
 This repository contains the full architecture, Cisco IOS-XE configurations, protocol behavioral analysis, and Wireshark control-plane validation tasks for a **three-area OSPFv2 design** (Area 0 backbone, Areas 1 and 2 totally stubby) built entirely inside a single **192.168.1.0/24** address block.
 
-> Replace `OWNER/REPO` in the badge above with your GitHub path after publishing.
 
 ---
 
